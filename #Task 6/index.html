@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 6</title>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="number" name="elements" class="input" placeholder="Number Of Elements" id="numbers" />
+            <input type="text" name="texts" class="input" placeholder="Elements Text" id="texts"/>
+            <select name="type" class="input" id="type">
+                <option value="Div">Div</option>
+                <option value="Section">Section</option>
+            </select>
+            <input type="submit" name="create" value="Create" id="submit" onclick="createElements(event)"/>
+        </form>
+        <div class="elements" id="output">
+            <!-- <div class="box" title="Element" id="id-1">Hello</div>
+            <div class="box" title="Element" id="id-2">Hello</div>
+            <div class="box" title="Element" id="id-3">Hello</div>
+            <div class="box" title="Element" id="id-4">Hello</div>
+            <div class="box" title="Element" id="id-5">Hello</div>
+            <div class="box" title="Element" id="id-6">Hello</div>
+            <div class="box" title="Element" id="id-7">Hello</div> -->
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // when click on the create button, execute this function
+
+    function createElements(event) {
+            // prevent the page from refreshing : so the page does not refresh after submitting
+            event.preventDefault();
+            // get the values from the html elements
+            var number = parseInt(document.getElementById("numbers").value);
+            var type = document.getElementById("type").value;
+            var content = document.getElementById("texts").value;
+            var output = document.getElementById("output");
+            // make the output empty
+            output.innerHTML = "";
+            
+            // loop through every element from the numbers
+            for (var i = 0; i < number; i++) {
+                // create an element with the type of the input : div or section
+                var element = document.createElement(type);
+                // add the class box so the style looks as we did before
+                element.classList.add("box");
+                // fill each div or section with the text that typed in the input
+                element.textContent = content;
+                // add all the elements to the output we have created in html "div"
+                output.appendChild(element.cloneNode(true));
+            }
+        }
+</script>
