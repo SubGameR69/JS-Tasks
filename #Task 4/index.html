@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task #4</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .assign {
+            text-align: center;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .assign input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px dashed #333;
+            margin: 10px;
+            width: 500px;
+        }
+
+        .assign .buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .assign button {
+            padding: 10px 15px;
+            margin: 10px 50px;
+            border-radius: 6px;
+            border: 1px solid #222;
+            color: #222;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .assign input:focus {
+            outline: none;
+            border-color: #ccc;
+        }
+
+
+        .assign .classes-list {
+            padding: 20px;
+            margin: 10px auto;
+            width: 610px;
+            background-color: #f1f0f0;
+        }
+
+        .assign .classes-list h5 {
+            margin: 0 0 10px;
+            text-align: left;
+        }
+
+        .assign .classes-list div span {
+            background-color: #ff5722;
+            padding: 6px 10px 8px;
+            margin-right: 5px;
+            border-radius: 6px;
+            color: white;
+            display: inline-flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="assign">
+        <input type="text" class="classes-to-add" placeholder="Add Classes"/>
+        <input type="text" class="classes-to-remove" placeholder="Remove Classes" />
+        <div class="buttons">
+            <button id="execute">Add Class</button>
+            <button id="remove">Remove Class</button>
+        </div>
+        <div class="classes-list">
+            <h5>Current Element Class Lists</h5>
+            <div class="father-div">
+                <!-- <span>hello world</span>
+                <span>james borne</span> -->
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
