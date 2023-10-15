@@ -1,0 +1,50 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #614385;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
+    background-color: #fff;
+    width: 400px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.amount {
+    width: 70%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #222;
+    border: 2px solid #555;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 15px auto;
+}
+
+.gbp, .euro {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.price h1 {
+    font-size: 35px;
+    margin: 10px;
+    color: #614385;
+}
