@@ -1,0 +1,44 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 500px;
+	padding: 35px;
+	background: #333;
+	border-radius: 6px;
+	margin: 10% auto;
+}
+
+.tabs {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tabs li {
+	padding: 10px;
+	background: #f6f4f4;
+	border-right: 1px solid white;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.tabs li.active,
+.tabs li:hover {
+	background: #ddd;
+}
+
+.content {
+	background: #ddd;
+}
+
+.content > div {
+	padding: 20px;
+}
+
+.content > div:not(:first-child) {
+	display: none;
+}
+
